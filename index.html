@@ -11,7 +11,8 @@
 </head>
 
 <body class="demo-body">
-    <nav class="mdc-permanent-drawer mdc-typography">
+    <!-- left panel -->
+    <nav class="mdc-permanent-drawer">
         <div class="mdc-permanent-drawer__toolbar-spacer"></div>
         <div class="mdc-permanent-drawer__content">
             <nav id="icon-with-text-demo" class="mdc-list">
@@ -22,20 +23,39 @@
             </nav>
         </div>
     </nav>
+    <!-- content -->
     <div class="demo-content">
+        <!-- title & tab navitation -->
         <header class="mdc-toolbar">
             <div class="mdc-toolbar__row">
                 <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
                     <a href="#" class="material-icons mdc-toolbar__menu-icon">menu</a>
                     <span class="mdc-toolbar__title">Title</span>
                 </section>
+                <section id="dynamic-demo-toolbar">
+                    <nav id="dynamic-tab-bar" class="mdc-tab-bar mdc-tab-bar--indicator-accent" role="tablist">
+                        <a role="tab" aria-controls="panel-1" class="mdc-tab mdc-tab--active" href="#panel-1">Recent</a>
+                        <a role="tab" aria-controls="panel-2" class="mdc-tab" href="#panel-2">Past</a>
+                        <span class="mdc-tab-bar__indicator"></span>
+                    </nav>
+                </section>
             </div>
         </header>
+        <!-- individual tabs -->
+        <main>
+            <section>
+                <div class="panels">
+                    <div class="panel active" id="panel-1" role="tabpanel" aria-hidden="false">Recent</div>
+                    <div class="panel" id="panel-2" role="tabpanel" aria-hidden="true">Past</div>
+                </div>
+            </section>
+        </main>
     </div>
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script>
     window.mdc.autoInit();
     </script>
+    <script src="main.js"></script>
 </body>
 
 </html>

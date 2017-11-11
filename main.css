@@ -5,6 +5,7 @@ html {
 }
 
 
+
 /* Place drawer and content side by side. */
 
 .demo-body {
@@ -18,6 +19,7 @@ html {
 }
 
 
+
 /* Stack toolbar and main on top of each other. */
 
 .demo-content {
@@ -27,6 +29,7 @@ html {
     height: 100%;
     box-sizing: border-box;
 }
+
 
 
 /* Place drawer above toolbar shadow. */
@@ -49,4 +52,16 @@ html {
 
 #extra-tall-content {
     height: 200vh;
+}
+
+.panels {
+    padding: 8px;
+}
+
+.panel {
+    display: none;
+}
+
+.panel.active {
+    display: block;
 }
