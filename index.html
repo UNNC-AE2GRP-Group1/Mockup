@@ -14,15 +14,34 @@
 
 <body class="demo-body">
     <!-- left panel -->
-    <nav class="mdc-permanent-drawer">
+    <nav class="mdc-permanent-drawer left-panel">
         <div class="mdc-permanent-drawer__toolbar-spacer"></div>
         <div class="mdc-permanent-drawer__content">
             <nav id="icon-with-text-demo" class="mdc-list">
+                <img src="img/calendar.png" alt="">
                 <a class="mdc-list-item mdc-permanent-drawer--selected" href="#"><i class="material-icons mdc-list-item__start-detail" aria-hidden="true">event</i>Sessions</a>
                 <a class="mdc-list-item" href="#"><i class="material-icons mdc-list-item__start-detail" aria-hidden="true">class</i>Modules</a>
                 <a class="mdc-list-item" href="#"><i class="material-icons mdc-list-item__start-detail" aria-hidden="true">assignment_ind</i>Applications</a>
                 <a class="mdc-list-item" href="#"><i class="material-icons mdc-list-item__start-detail" aria-hidden="true">assessment</i>Statistics</a>
-                <!-- <hr class="mdc-list-divider"> -->
+                <hr class="mdc-list-divider">
+                <div class="module-filter">
+                  <h6>Modules</h6>
+                  <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" checked>
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Programming Paradigms</span>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" checked>
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Operating Systems Concurrency</span>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" checked>
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Software Maintenance</span>
+                  </label>
+                </div>
             </nav>
         </div>
     </nav>

@@ -69,3 +69,16 @@ html {
 .action-btn {
     margin-bottom: 8px;
 }
+
+.left-panel {
+    width: 256px;
+}
+
+.left-panel img {
+    width: 100%;
+}
+
+.module-filter {
+    padding: 8px;
+    font-size: 14px;
+}
