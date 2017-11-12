@@ -13,10 +13,24 @@
 </head>
 
 <body class="demo-body">
-    <!-- left panel -->
-    <nav class="mdc-permanent-drawer left-panel">
-        <div class="mdc-permanent-drawer__toolbar-spacer"></div>
-        <div class="mdc-permanent-drawer__content">
+    <!-- title & tab navitation -->
+    <header class="mdc-toolbar">
+        <div class="mdc-toolbar__row">
+            <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                <a href="#" class="material-icons mdc-toolbar__menu-icon">menu</a>
+                <span class="mdc-toolbar__title">Title</span>
+            </section>
+            <section id="dynamic-demo-toolbar">
+                <nav id="dynamic-tab-bar" class="mdc-tab-bar mdc-tab-bar--indicator-accent" role="tablist">
+                    <a role="tab" aria-controls="panel-1" class="mdc-tab mdc-tab--active" href="#panel-1">This Week</a>
+                    <a role="tab" aria-controls="panel-2" class="mdc-tab" href="#panel-2">Past</a>
+                    <span class="mdc-tab-bar__indicator"></span>
+                </nav>
+            </section>
+        </div>
+    </header>
+    <div class="demo-content">
+        <nav class="mdc-permanent-drawer mdc-typography">
             <nav id="icon-with-text-demo" class="mdc-list">
                 <img src="img/calendar.png" alt="">
                 <a class="mdc-list-item mdc-permanent-drawer--selected" href="#"><i class="material-icons mdc-list-item__start-detail" aria-hidden="true">event</i>Sessions</a>
@@ -25,149 +39,132 @@
                 <a class="mdc-list-item" href="#"><i class="material-icons mdc-list-item__start-detail" aria-hidden="true">assessment</i>Statistics</a>
                 <hr class="mdc-list-divider">
                 <div class="module-filter">
-                  <h6>Modules</h6>
-                  <label class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" checked>
-                      <span class="custom-control-indicator"></span>
-                      <span class="custom-control-description">Programming Paradigms</span>
-                  </label>
-                  <label class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" checked>
-                      <span class="custom-control-indicator"></span>
-                      <span class="custom-control-description">Operating Systems Concurrency</span>
-                  </label>
-                  <label class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" checked>
-                      <span class="custom-control-indicator"></span>
-                      <span class="custom-control-description">Software Maintenance</span>
-                  </label>
+                    <h6>Modules</h6>
+                    <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" checked>
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description">Programming Paradigms</span>
+                    </label>
+                    <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" checked>
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description">Operating Systems Concurrency</span>
+                    </label>
+                    <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" checked>
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description">Software Maintenance</span>
+                    </label>
                 </div>
             </nav>
-        </div>
-    </nav>
-    <!-- content -->
-    <div class="demo-content">
-        <!-- title & tab navitation -->
-        <header class="mdc-toolbar">
-            <div class="mdc-toolbar__row">
-                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-                    <a href="#" class="material-icons mdc-toolbar__menu-icon">menu</a>
-                    <span class="mdc-toolbar__title">Title</span>
-                </section>
-                <section id="dynamic-demo-toolbar">
-                    <nav id="dynamic-tab-bar" class="mdc-tab-bar mdc-tab-bar--indicator-accent" role="tablist">
-                        <a role="tab" aria-controls="panel-1" class="mdc-tab mdc-tab--active" href="#panel-1">This Week</a>
-                        <a role="tab" aria-controls="panel-2" class="mdc-tab" href="#panel-2">Past</a>
-                        <span class="mdc-tab-bar__indicator"></span>
-                    </nav>
-                </section>
-            </div>
-        </header>
-        <!-- individual tabs -->
+        </nav>
         <main>
-            <section>
-                <div class="panels">
-                    <!-- recent sessions -->
-                    <div class="panel active" id="panel-1" role="tabpanel" aria-hidden="false">
-                        <div class="dropdown action-btn">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add Session</button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addSessionModal">Programming Paradigms</a>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addSessionModal">Operating Systems Concurrency</a>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addSessionModal">Software Maintenance</a>
+            <!-- individual tabs -->
+            <main>
+                <section>
+                    <div class="panels">
+                        <!-- recent sessions -->
+                        <div class="panel active" id="panel-1" role="tabpanel" aria-hidden="false">
+                            <div class="dropdown action-btn">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add Session</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addSessionModal">Programming Paradigms</a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addSessionModal">Operating Systems Concurrency</a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addSessionModal">Software Maintenance</a>
+                                </div>
                             </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Module</th>
+                                        <th scope="col">Attendance Rate</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Time</th>
+                                        <th scope="col">Location</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Programming Paradigms</td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                            </div>
+                                        </td>
+                                        <td>Nov 11, 2017</td>
+                                        <td>14:00</td>
+                                        <td>SEB 306</td>
+                                        <td><i class="material-icons mdc-button__icon">more_vert</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Operating Systems Concurrency</td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                            </div>
+                                        </td>
+                                        <td>Nov 11, 2017</td>
+                                        <td>14:00</td>
+                                        <td>SEB 306</td>
+                                        <td><i class="material-icons mdc-button__icon">more_vert</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Programming Paradigms</td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 77%;" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">77%</div>
+                                            </div>
+                                        </td>
+                                        <td>Nov 11, 2017</td>
+                                        <td>14:00</td>
+                                        <td>SEB 306</td>
+                                        <td><i class="material-icons mdc-button__icon">more_vert</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Software Maintenance</td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                            </div>
+                                        </td>
+                                        <td>Nov 11, 2017</td>
+                                        <td>14:00</td>
+                                        <td>SEB 306</td>
+                                        <td><i class="material-icons mdc-button__icon">more_vert</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Programming Paradigms</td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 77%;" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">77%</div>
+                                            </div>
+                                        </td>
+                                        <td>Nov 11, 2017</td>
+                                        <td>14:00</td>
+                                        <td>SEB 306</td>
+                                        <td><i class="material-icons mdc-button__icon">more_vert</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Programming Paradigms</td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                            </div>
+                                        </td>
+                                        <td>Nov 11, 2017</td>
+                                        <td>14:00</td>
+                                        <td>SEB 306</td>
+                                        <td><i class="material-icons mdc-button__icon">more_vert</i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Module</th>
-                                    <th scope="col">Attendance Rate</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Time</th>
-                                    <th scope="col">Location</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Programming Paradigms</td>
-                                    <td>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-                                        </div>
-                                    </td>
-                                    <td>Nov 11, 2017</td>
-                                    <td>14:00</td>
-                                    <td>SEB 306</td>
-                                    <td><i class="material-icons mdc-button__icon">more_vert</i></td>
-                                </tr>
-                                <tr>
-                                    <td>Operating Systems Concurrency</td>
-                                    <td>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-                                        </div>
-                                    </td>
-                                    <td>Nov 11, 2017</td>
-                                    <td>14:00</td>
-                                    <td>SEB 306</td>
-                                    <td><i class="material-icons mdc-button__icon">more_vert</i></td>
-                                </tr>
-                                <tr>
-                                    <td>Programming Paradigms</td>
-                                    <td>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 77%;" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">77%</div>
-                                        </div>
-                                    </td>
-                                    <td>Nov 11, 2017</td>
-                                    <td>14:00</td>
-                                    <td>SEB 306</td>
-                                    <td><i class="material-icons mdc-button__icon">more_vert</i></td>
-                                </tr>
-                                <tr>
-                                    <td>Software Maintenance</td>
-                                    <td>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-                                        </div>
-                                    </td>
-                                    <td>Nov 11, 2017</td>
-                                    <td>14:00</td>
-                                    <td>SEB 306</td>
-                                    <td><i class="material-icons mdc-button__icon">more_vert</i></td>
-                                </tr>
-                                <tr>
-                                    <td>Programming Paradigms</td>
-                                    <td>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 77%;" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">77%</div>
-                                        </div>
-                                    </td>
-                                    <td>Nov 11, 2017</td>
-                                    <td>14:00</td>
-                                    <td>SEB 306</td>
-                                    <td><i class="material-icons mdc-button__icon">more_vert</i></td>
-                                </tr>
-                                <tr>
-                                    <td>Programming Paradigms</td>
-                                    <td>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-                                        </div>
-                                    </td>
-                                    <td>Nov 11, 2017</td>
-                                    <td>14:00</td>
-                                    <td>SEB 306</td>
-                                    <td><i class="material-icons mdc-button__icon">more_vert</i></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!-- past sessions -->
+                        <div class="panel" id="panel-2" role="tabpanel" aria-hidden="true">Past</div>
                     </div>
-                    <!-- past sessions -->
-                    <div class="panel" id="panel-2" role="tabpanel" aria-hidden="true">Past</div>
-                </div>
-            </section>
+                </section>
+            </main>
         </main>
     </div>
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
