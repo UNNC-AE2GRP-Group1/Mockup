@@ -65,3 +65,7 @@ html {
 .panel.active {
     display: block;
 }
+
+.action-btn {
+    margin-bottom: 8px;
+}

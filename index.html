@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Greeting App</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 </head>
 
@@ -20,6 +22,7 @@
                 <a class="mdc-list-item" href="#"><i class="material-icons mdc-list-item__start-detail" aria-hidden="true">class</i>Modules</a>
                 <a class="mdc-list-item" href="#"><i class="material-icons mdc-list-item__start-detail" aria-hidden="true">assignment_ind</i>Applications</a>
                 <a class="mdc-list-item" href="#"><i class="material-icons mdc-list-item__start-detail" aria-hidden="true">assessment</i>Statistics</a>
+                <!-- <hr class="mdc-list-divider"> -->
             </nav>
         </div>
     </nav>
@@ -34,7 +37,7 @@
                 </section>
                 <section id="dynamic-demo-toolbar">
                     <nav id="dynamic-tab-bar" class="mdc-tab-bar mdc-tab-bar--indicator-accent" role="tablist">
-                        <a role="tab" aria-controls="panel-1" class="mdc-tab mdc-tab--active" href="#panel-1">Recent</a>
+                        <a role="tab" aria-controls="panel-1" class="mdc-tab mdc-tab--active" href="#panel-1">This Week</a>
                         <a role="tab" aria-controls="panel-2" class="mdc-tab" href="#panel-2">Past</a>
                         <span class="mdc-tab-bar__indicator"></span>
                     </nav>
@@ -45,14 +48,168 @@
         <main>
             <section>
                 <div class="panels">
-                    <div class="panel active" id="panel-1" role="tabpanel" aria-hidden="false">Recent</div>
+                    <!-- recent sessions -->
+                    <div class="panel active" id="panel-1" role="tabpanel" aria-hidden="false">
+                        <div class="dropdown action-btn">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add Session</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addSessionModal">Programming Paradigms</a>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addSessionModal">Operating Systems Concurrency</a>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addSessionModal">Software Maintenance</a>
+                            </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Module</th>
+                                    <th scope="col">Attendance Rate</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Location</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Programming Paradigms</td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                        </div>
+                                    </td>
+                                    <td>Nov 11, 2017</td>
+                                    <td>14:00</td>
+                                    <td>SEB 306</td>
+                                    <td><i class="material-icons mdc-button__icon">more_vert</i></td>
+                                </tr>
+                                <tr>
+                                    <td>Operating Systems Concurrency</td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                        </div>
+                                    </td>
+                                    <td>Nov 11, 2017</td>
+                                    <td>14:00</td>
+                                    <td>SEB 306</td>
+                                    <td><i class="material-icons mdc-button__icon">more_vert</i></td>
+                                </tr>
+                                <tr>
+                                    <td>Programming Paradigms</td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 77%;" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">77%</div>
+                                        </div>
+                                    </td>
+                                    <td>Nov 11, 2017</td>
+                                    <td>14:00</td>
+                                    <td>SEB 306</td>
+                                    <td><i class="material-icons mdc-button__icon">more_vert</i></td>
+                                </tr>
+                                <tr>
+                                    <td>Software Maintenance</td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                        </div>
+                                    </td>
+                                    <td>Nov 11, 2017</td>
+                                    <td>14:00</td>
+                                    <td>SEB 306</td>
+                                    <td><i class="material-icons mdc-button__icon">more_vert</i></td>
+                                </tr>
+                                <tr>
+                                    <td>Programming Paradigms</td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 77%;" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">77%</div>
+                                        </div>
+                                    </td>
+                                    <td>Nov 11, 2017</td>
+                                    <td>14:00</td>
+                                    <td>SEB 306</td>
+                                    <td><i class="material-icons mdc-button__icon">more_vert</i></td>
+                                </tr>
+                                <tr>
+                                    <td>Programming Paradigms</td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                        </div>
+                                    </td>
+                                    <td>Nov 11, 2017</td>
+                                    <td>14:00</td>
+                                    <td>SEB 306</td>
+                                    <td><i class="material-icons mdc-button__icon">more_vert</i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- past sessions -->
                     <div class="panel" id="panel-2" role="tabpanel" aria-hidden="true">Past</div>
                 </div>
             </section>
         </main>
     </div>
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <div class="modal fade" id="addSessionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Session</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="createSession-module">Module</label>
+                            <select id="createSession-module" class="form-control">
+                                <option selected>Programming Paradigms</option>
+                                <option>Operating Systems Concurrency</option>
+                                <option>Software Maintenance</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="createSession-date">Date</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="material-icons mdc-button__icon">date_range</i></div>
+                                <input type="date" class="form-control" id="createSession-date" placeholder="Nov 17, 2017">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="createSession-time">Time</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="material-icons mdc-button__icon">schedule</i></div>
+                                <input type="time" class="form-control" id="createSession-time" placeholder="14:00">
+                            </div>
+                        </div>
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Repeat for <input type="number" value="2"> times</span>
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-btn"><button class="btn btn-secondary" type="button">Lab</button></span>
+                            <span class="input-group-btn"><button class="btn btn-secondary" type="button">Lecture</button></span>
+                            <span class="input-group-btn"><button class="btn btn-secondary" type="button">Other</button></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
