@@ -1,3 +1,5 @@
+window.mdc.autoInit();
+
 var dynamicTabBar = window.dynamicTabBar = new mdc.tabs.MDCTabBar(document.querySelector('#dynamic-tab-bar'));
 var panels = document.querySelector('.panels');
 
