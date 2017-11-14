@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="mdc-typography">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Attendance</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="demo-body">
+    <!-- title & navitation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Nottingham</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Session <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="modules.html">Modules</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="applications.html">Applications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="statistics.html">Statistics</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="demo-content">
+        <main>
+            <div class="container">
+                <button type="button" class="action-btn btn btn-primary">New Application</button>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Catherine Geagan</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">8610086</h6>
+                        <div class="card-text">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <ul class="list-group">
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                Absence Application
+                                                <span class="badge badge-danger badge-pill">Rejected</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                Appeal
+                                                <span class="badge badge-danger badge-pill">Rejected</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                Appeal
+                                                <span class="badge badge-success badge-pill">Accepted</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="mdc-list-group">
+                                            <h3 class="mdc-list-group__subheader">Stats</h3>
+                                            <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list two-line-avatar-text-icon-demo">
+                                                <li class="mdc-list-item">
+                                                    <span class="mdc-list-item__start-detail grey-bg" role="presentation"><i class="material-icons" aria-hidden="true">folder</i></span>
+                                                    <span class="mdc-list-item__text abstitle">Total Time<span class="mdc-list-item__text__secondary absdata">3 days</span></span>
+                                                    <a href="#" class="mdc-list-item__end-detail material-icons" aria-label="View more information" title="More info" onclick="event.preventDefault();">info</a>
+                                                </li>
+                                                <li class="mdc-list-item">
+                                                    <span class="mdc-list-item__start-detail grey-bg" role="presentation"><i class="material-icons" aria-hidden="true">folder</i></span>
+                                                    <span class="mdc-list-item__text abstitle">Affected Sessions<span class="mdc-list-item__text__secondary absdata">5</span></span>
+                                                    <a href="#" class="mdc-list-item__end-detail material-icons" aria-label="View more information" title="More info" onclick="event.preventDefault();">info</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="card-link">Archive</a>
+                        <a href="#" class="card-link">Append</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="modal fade" id="addSessionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Session</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="createSession-module">Module</label>
+                            <select id="createSession-module" class="form-control">
+                                <option selected>Programming Paradigms</option>
+                                <option>Operating Systems Concurrency</option>
+                                <option>Software Maintenance</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="createSession-date">Date</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="material-icons mdc-button__icon">date_range</i></div>
+                                <input type="date" class="form-control" id="createSession-date" placeholder="Nov 17, 2017">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="createSession-time">Time</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="material-icons mdc-button__icon">schedule</i></div>
+                                <input type="time" class="form-control" id="createSession-time" placeholder="14:00">
+                            </div>
+                        </div>
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Repeat for <input type="number" value="2"> times</span>
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-btn"><button class="btn btn-secondary" type="button">Lab</button></span>
+                            <span class="input-group-btn"><button class="btn btn-secondary" type="button">Lecture</button></span>
+                            <span class="input-group-btn"><button class="btn btn-secondary" type="button">Other</button></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
